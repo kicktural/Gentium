@@ -1,0 +1,38 @@
+.services{
+    padding: 120px 0;
+    .serv-item{
+        background-color: $primarycolor;
+        padding: 20px 0;
+        overflow: hidden;
+        margin-bottom: 10px;
+        .serv-icon{
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(3);
+
+            transition: .3s linear;
+        }
+        h1{
+            transform: translate(-50px);
+            transition: .5s linear;
+            .right-icon{
+                transform: translateX(-25px);
+                transition: .3s linear;
+            }
+        }
+        &:hover{
+            h1{
+                transform: translateX(-0px);
+            }
+            .serv-icon{
+                opacity: 0.7;
+                visibility: visible;
+                transform: scale(5);
+            }
+            .right-icon{
+                transform: translateX(-10px);
+            }
+        }
+    }
+}
+

@@ -1,0 +1,74 @@
+header {
+    background-image: url(https://gentium.pixerex.com/wp-content/uploads/2019/01/hero_02.jpg);
+    background-color: black;
+    background-position: 80% -28%;
+    background-repeat: no-repeat;
+    background-size: 640px auto;
+    height: 100vh;
+
+    ul {
+        li {
+            padding: 0 10px;
+
+            a {
+                color: #fff;
+                position: relative;
+                font-size: 30px;
+
+                &:hover {
+                    color: #fff;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 0%;
+                        height: 2px;
+                        background-color: $primarycolor;
+                        transition: .10s linear;
+
+                    }
+
+                    &:hover::after {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .mybtn {
+        color: #fff;
+        border: 1px solid $primarycolor;
+        background-color: transparent;
+        padding: 20px 40px;
+        position: relative;
+        z-index: 100;
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &::after {
+            transition: .5s linear;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            width: 0%;
+            height: 100%;
+            background-color: $primarycolor;
+        }
+    }
+}
+
+.text{
+    margin-top: 123px;
+   h1{
+    font-size: 100px;
+   }
+}
